@@ -1,1 +1,1 @@
-qwertyuoipß# algorithm-dataStructure
+# algorithm-dataStructure
