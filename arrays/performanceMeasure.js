@@ -1,3 +1,4 @@
+// ARRAYS
 function AddLastName(){
   const startTime = new Date().getSeconds();
   const members = ['arnold', 'Archange', 'Aaron', 'Armand', 'Arielle', 'Arland'];
@@ -7,3 +8,4 @@ function AddLastName(){
   return endtime - startTime;
 }
 console.log(AddLastName())
+
