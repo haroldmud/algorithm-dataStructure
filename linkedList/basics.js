@@ -1,33 +1,31 @@
 class Node {
-    constructor(data) {
-      this.data = data;
-      this.next = null;
-    }
+  constructor(data) {
+    this.data = data
+    this.next = null
+  }
 }
 
 class LinkedList {
   constructor() {
-    this.head = null;
-    this.length = 0;
+    this.head = null
+    this.length = 0
   }
 
-  append(data) {
-    // Append a node to the end of the list
+  insert(data) {
     const node = new Node(data)
-    if(!this.head) this.head = node;
-    else {
-      let current  = this.head;
+    if(!this.head) this.head = node
+    else{
+      let current = this.head
       while(current.next !== null) {
-         current = current.next;
+        current = current.next
       }
-      current.next = node;
+      current.next = node
     }
-    this.length++;
   }
 }
 
-const list = new LinkedList();
-list.append(1);
-list.append(2);
-list.append(3);
-console.log(list);
+const list = new LinkedList()
+list.insert("love in the sky");
+list.insert("blue sky");
+list.insert("another love");
+console.log(list) 
