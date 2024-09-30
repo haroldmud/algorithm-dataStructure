@@ -22,10 +22,36 @@ class LinkedList {
       current.next = node
     }
   }
+  delete(data) {
+    let current = this.head
+    let prev = null
+    while(current) {
+      if(current.data === data) {
+        if(prev) prev.next = current.next
+        else this.head = current.next
+        this.length--
+        return true
+      }
+      prev = current
+      current = current.next
+    }
+    return false
+  }
+  edit(data, newData) {
+    let current = this.head
+    while(current) {
+      if(current.data === data) {
+        current.data = newData
+        return true
+      }
+      current = current.next
+    }
+    return false
+  }
 }
 
 const list = new LinkedList()
 list.insert("love in the sky");
 list.insert("blue sky");
 list.insert("another love");
-console.log(list) 
+console.log(list)
