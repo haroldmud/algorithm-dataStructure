@@ -30,12 +30,12 @@ class LinkedList {
         if(prev) prev.next = current.next
         else this.head = current.next
         this.length--
-        return true
+        return 'deleted successfully'
       }
       prev = current
       current = current.next
     }
-    return false
+    return 'not found'
   }
   edit(data, newData) {
     let current = this.head
@@ -48,10 +48,28 @@ class LinkedList {
     }
     return false
   }
+  find(data) {
+    let current = this.head
+    while(current) {
+      if(current.data === data) return true
+      current = current.next
+    }
+  }
+  toString() {
+    let current = this.head
+    let result = ''
+    while(current) {
+      result += current.data + (current.next ? ' >>>>>> ' : ' ')
+      current = current.next
+    }
+    return result || 'empty list'
+  }
 }
 
 const list = new LinkedList()
-list.insert("love in the sky");
 list.insert("blue sky");
+list.insert("love in the sky");
 list.insert("another love");
-console.log(list)
+
+console.log(list.delete("love in the sky"))
+console.log(list.toString())
