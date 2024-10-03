@@ -70,6 +70,5 @@ const list = new LinkedList()
 list.insert("blue sky");
 list.insert("love in the sky");
 list.insert("another love");
-
 console.log(list.delete("love in the sky"))
 console.log(list.toString())
